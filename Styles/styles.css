@@ -1,0 +1,84 @@
+:root {
+    --color-primary-light : #b4aee8;
+    --color-primary : #93329e;
+    --color-primary-dark : #440a67;
+    --color-grey : #edeef7;
+    --color-light : #e4fbff;
+}
+
+/* Start UP CSS Part */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.login {
+    background: var(--color-primary-light);
+    margin-right: 10px;
+    color: var(--color-primary-dark);
+    border: 2px solid white;
+}
+
+/* Global CSS Part */
+.color-primary-bg {
+    background: var(--color-primary-dark);
+}
+
+/* Navbar CSS Part */
+
+.navbar {
+    background: var(--color-primary);
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+li.hvr-underline-reveal:before{
+    background: #fff;
+}
+
+.navbar img {
+    height: 50px;
+    width: 80px;
+}
+
+/* Hero Part */
+
+.hero-edit {
+    margin-top: 20px;
+    padding-left: 50px;
+    object-fit: cover;
+    width: 95%;
+    height: 95%;
+}
+
+.heading-div {
+    height: 100px;
+}
+
+.custom-button {
+    margin-top: 100px;
+    border: 2px solid var(--color-primary-dark);
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 100px;
+    font-size: large;
+}
+
+.custom-button:hover {
+    color: #fff;
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary-dark);
+}
+    
+    
