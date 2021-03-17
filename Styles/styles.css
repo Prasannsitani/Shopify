@@ -47,19 +47,14 @@ li.hvr-underline-reveal:before{
     background: #fff;
 }
 
-.navbar img {
-    height: 50px;
-    width: 80px;
-}
-
 /* Hero Part */
 
 .hero-edit {
-    margin-top: 20px;
+    margin-top: 50px;
     padding-left: 50px;
     object-fit: cover;
     width: 95%;
-    height: 95%;
+    height: 100%;
 }
 
 .heading-div {
@@ -81,4 +76,26 @@ li.hvr-underline-reveal:before{
     background: var(--color-primary-dark);
 }
     
-    
+
+/* Top Sale Section */
+
+#top-sale img{
+    transition: transform .5s ease;
+}
+
+#top-sale img:hover {
+    transform: scale(1.1);
+    margin-bottom: 5px;
+}
+
+/* Special Price */
+.grid {
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+.grid-item {
+    margin-right: 1.2rem;
+    margin-top: 1rem;
+}
+     
