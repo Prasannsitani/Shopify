@@ -1,10 +1,22 @@
-// alert(123);
-// var $grid = $(".grid").isotype({
-//     itemSelector: '.grid-item',
-//     layoutMode : 'fitRows'
-// });
+var qtyUp = $('.qty-up');
+var qtyDown = $('.qty-down');
+var qtyInput = $('.qty-input');
 
-// $(".button-group").on('click', "button", function() {
-//     var filterValue = $(this).attr("data-filter");
-//     $grid.isotype({filter: filterValue});
-// })
+// Increase value of input tag
+qtyUp.on('click', function() {
+    if(qtyInput.val() < 10 && qtyInput.val() >= 1) {
+        qtyInput.val((i, old) => {
+            return ++old;
+        });    
+    }
+});
+
+// Decrease Value of input tag
+qtyDown.click(function() {
+    if(qtyInput.val() <= 10 && qtyInput.val() > 1) {
+        qtyInput.val((i, old) => {
+            return --old;
+        });    
+    }
+});
+

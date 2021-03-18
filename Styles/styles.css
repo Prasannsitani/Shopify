@@ -1,9 +1,10 @@
 :root {
-    --color-primary-light : #b4aee8;
+    --color-primary-light : hsl(246, 56%, 80%);
     --color-primary : #93329e;
     --color-primary-dark : #440a67;
     --color-grey : #edeef7;
     --color-light : #e4fbff;
+    --color-yellow : rgb(255, 238, 2);
 }
 
 /* Start UP CSS Part */
@@ -24,8 +25,20 @@ body a {
 }
 
 /* Global CSS Part */
-.color-primary-bg {
+.color-primary-dark-bg {
     background: var(--color-primary-dark);
+}
+
+.color-primary-bg {
+    background: var(--color-primary);
+}
+
+.color-primary-light-bg {
+    background: var(--color-primary-light);
+}
+
+.color-primary {
+    color: var(--color-primary);
 }
 
 /* Navbar CSS Part */
@@ -98,4 +111,3 @@ li.hvr-underline-reveal:before{
     margin-right: 1.2rem;
     margin-top: 1rem;
 }
-     

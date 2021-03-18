@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    
+    <!-- Personal  CSS -->
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="./Styles/hover.css">
+
+    <!--  Title Of the site  -->
+    <title>Shopify-Home</title>
+    </head>
+    <body>
+
+    <!--  Navbar or Header Section -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a href="#" class="nav-link">
+        <h3>Shopify</h3>
+        <!-- <img src="./Images/logo.png" alt="Logo"> -->
+      </a>
+      <ul class="nav justify-content-end m-auto">
+      <li class="nav-item hvr-underline-reveal">
+        <a class="nav-link active" aria-current="page" href="./home.html#top-sale">
+          <i class="fas fa-dollar-sign"></i> On Sale
+        </a>
+      </li>
+      <li class="nav-item hvr-underline-reveal">
+        <a class="nav-link" href="./home.html#special-price">
+          <i class="fa fa-list-alt"></i> Category <i class="fas fa-chevron-down"></i>
+        </a>
+      </li>
+      <li class="nav-item  hvr-underline-reveal">
+        <a class="nav-link" href="#">
+          <i class="fab fa-product-hunt"></i> Products
+        </a>
+      </li>
+      <li class="nav-item  hvr-underline-reveal">
+        <a href="#" class="nav-link">
+          <i class="far fa-clock"></i> Comming Soon
+        </a>
+      </li>
+      <li class="nav-item  hvr-underline-reveal">
+        <a href="./home.html#latest-blogs" class="nav-link">
+          <i class="fas fa-blog"></i> Blogs
+        </a>
+      </li>
+      <li class="nav-item  hvr-underline-reveal">
+        <a href="#" class="nav-link">
+          <i class="far fa-heart"></i> Wishlist
+        </a>
+      </li>
+    </ul>
+    <form action="#">
+      <button class="btn login">Sign In</button>
+      <a href="#" class="py-2 rounded-pill color-primary-bg">
+        <span class="px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
+        <span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+      </a>
+    </form>
+    </div>
+  </nav>
+
+    <!-- Main Section -->
+    <main id="main">
+
+    <!-- Product Section -->
+    <section id="product" class="py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+            <img src="./Images/products/Shoe/shoe.jpg" alt="Product Image" class="img-fluid">
+            <div class="row pt-4">
+              <div class="col">
+                <button class="btn btn-danger form-control">Proceed to Buy</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-warning form-control">Add to Cart</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+              <h5 class="m-0">Nike Revolution 5 Running Shoes For Men (Red)</h5>
+              <p class="text-black-50 m-0">by NIKE</p>
+              <div class="d-flex">
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <a href="#" class="mx-2">2000 ratings | 300+ answered questions</a>
+              </div>
+              <hr class="m-2">
+              <table class="my-3">
+                <tr>
+                  <td style="padding: 0 10px 0 0;">M.R.P : </td>
+                  <td><strike>$300.00</strike></td>
+                </tr>
+                <tr>
+                  <td style="padding: 0 10px 0 0;">Discount Price : </td>
+                  <td class="text-danger" style="font-size: 20px;">$<span>250.00</span><small style="font-size: 14px;" class="text-dark">&nbsp;&nbsp;inclusive of all taxes</small></td>
+                </tr>
+                <tr>
+                  <td>You save : </td>
+                  <td class="text-danger" style="font-size: 16px;">$<span>50.00</span></td>
+                </tr>
+              </table>
+
+              <!-- Policy -->
+              <div id="policy">
+                <div class="d-flex">
+                  <div class="return text-center mr-5">
+                    <div class="my-2 color-primary">
+                      <span style="color: #93329e;" class="fas fa-retweet border p-3 rounded-pill"></span>
+                    </div>
+                    <a href="#">10 Days <br> Replacement</a>
+                  </div>
+                  <div class="return text-center mx-5">
+                    <div class="my-2 color-primary">
+                      <span style="color: #93329e;" class="fas fa-truck border p-3 rounded-pill"></span>
+                    </div>
+                    <a href="#">Fastest Shopify <br> Delivery</a>
+                  </div>
+                  <div class="return text-center mr-5">
+                    <div class="my-2 color-primary">
+                      <span style="color: #93329e;" class="fas fa-check-double border p-3 rounded-pill"></span>
+                    </div>
+                    <a href="#">1 Year <br> Warranty</a>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              
+              <!-- Color and size section -->
+              <div class="row">
+                <div class="col-6">
+                  <!-- Color Section -->
+                  <div class="color my-3">
+                    <div class="d-flex justify-content-between">
+                      <h6>Color : </h6>
+                      <div style="background: goldenrod" class="p-2 rounded-circle"><button class="btn"></button></div>
+                      <div class="color-primary-bg p-2 rounded-circle"><button class="btn"></button></div>
+                      <div style="background: green;" class="p-2 rounded-circle"><button class="btn"></button></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 my-3">
+                  <div class="qty d-flex">
+                    <h6>Quantity:</h6>
+                    <div class="px-4 d-flex">
+                      <button class="qty-up border bg-light"><i class="fas fa-angle-up"></i></button>
+                      <input type="text" class="qty-input border px-2 w-50 bg-light" value="1" placeholder="1" disabled>
+                      <button class="qty-down border bg-light"><i class="fas fa-angle-down"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shoe Size -->
+              <div class="size my-3">
+                <h5>Size : </h5>
+                <div class="d-flex justify-content-between w-75">
+                  <div class="border p-2 rounded-circle">
+                    <button class="btn text-dark">S</button>
+                  </div>
+                  <div class="border p-2 rounded-circle">
+                    <button class="btn text-dark">M</button>
+                  </div>
+                  <div class="border p-2 rounded-circle">
+                    <button class="btn text-dark">L</button>
+                  </div>
+                  <div class="border p-2 rounded-circle">
+                    <button class="btn text-dark">XL</button>
+                  </div>
+                  <div class="border p-2 rounded-circle">
+                    <button class="btn text-dark">XXL</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="col-12">
+            <h4>Product Description</h4>
+            <hr>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat enim explicabo facilis? Laborum dolore asperiores molestiae quibusdam laudantium, rerum consequuntur incidunt nulla esse, expedita fugiat omnis sed placeat? Corporis, dicta! </p>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat enim explicabo facilis? Laborum dolore asperiores molestiae quibusdam laudantium, rerum consequuntur incidunt nulla esse, expedita fugiat omnis sed placeat? Corporis, dicta! </p>
+          </div>
+        </div>
+    </section>
+        
+    <!-- Top Sale Section -->
+    <section id="top-sale">
+      <div class="container py-5">
+        <h4>Similar Products</h4>
+        <hr>
+        <div class="owl-carousel owl-theme">
+
+        <!-- Item - 1 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/Shoe/shoe.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">Nike Shoes</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $250
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item - 2 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/headphones/headphone.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">JBL Headphones</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $80
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item - 3 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/Watch/watch2.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">BratelBoro Watch</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $100
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item - 4 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/Potted Plant/pottedPlant.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">Potted Plant</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $40
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item - 5 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/camera/camera3.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">One Step 2 Polaroid Camera</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $100
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item - 6 -->
+          <div class="item py-2 bg-light">
+            <div class="product">
+              <a href="#"><img src="./Images/products/Glasses/glasses.jpg" alt="Product image" class="img-fluid"></a>
+              <div class="text-center">
+                <h6 class="h6">Sunglasses</h6>
+                <div class="rating text-warning">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </div>
+                <div class="price py-2">
+                  $30
+                </div>
+                <button type="submit" class="btn btn-warning">Add to cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 End -->
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="bg-dark text-white pt-5 pb-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-12">
+            <h4>Shopify</h4>
+            <p class="text-white-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, ab!</p>
+          </div>
+          <div class="col-lg-4 col-12">
+            <h4>Newsletter</h4>
+            <form class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Email *">
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-2 col-12">
+            <h4>Information</h4>
+            <div class="d-flex flex-column flex-wrap">
+              <a href="#" class="text-white-50 pb-1">About Us</a>
+              <a href="#" class="text-white-50 pb-1">Delivery Indormation</a>
+              <a href="#" class="text-white-50 pb-1">Privacy Policy</a>
+              <a href="#" class="text-white-50 pb-1">Terms & Conditions</a>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <h4>Account</h4>
+            <div class="d-flex flex-column flex-wrap">
+              <a href="#" class="text-white-50 pb-1">My Account</a>
+              <a href="#" class="text-white-50 pb-1">Order History</a>
+              <a href="#" class="text-white-50 pb-1">Wish List</a>
+              <a href="#" class="text-white-50 pb-1">Newsletters</a>
+            </div>
+          </div>
+
+          <div class="copyright text-center bg-dark text-white pt-5 pb-1">
+            <p>
+              &copy; Copyrights by <a href="#">Shopify</a> 2021.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Jquery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+
+    <!-- Isotope -->
+    <script src="./Javascript/isotope.pkgd.min.js"></script>
+
+    <!-- Owl Carousel Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+    <!-- Custom Javascript -->
+    <script>
+        $('#top-sale .owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:true,
+          dots: false,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+          }
+      })
+
+      // init Isotope
+      var $grid = $('.grid').isotope({
+        // options
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+      });
+
+      // filter items on button click
+      $('.button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+
+      // New Products Carousel
+      $('#new-products .owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:false,
+          dots: true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              },
+              1000:{
+                  items:5
+              }
+          }
+      })
+
+      // Blogs Carousel
+      $('#latest-blogs .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:3
+              }
+          }
+      })
+
+    </script>
+    <script src="./index.js"></script>
+  </body>
+</html>
