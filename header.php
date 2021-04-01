@@ -25,7 +25,7 @@
     <title>Shopify-Home</title>
 
     <?php
-
+      
       // Requring all the functions from fuctions.php file.
       require('functions.php');
     ?>
@@ -73,9 +73,9 @@
     </ul>
     <form action="#">
       <button class="btn login">Sign In</button>
-      <a href="#" class="py-2 rounded-pill color-primary-dark-bg">
+      <a href="cart.php" class="py-2 rounded-pill color-primary-dark-bg">
         <span class="px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-        <span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+        <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
       </a>
     </form>
     </div>

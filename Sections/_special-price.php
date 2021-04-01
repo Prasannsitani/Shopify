@@ -1,144 +1,59 @@
+<?php 
+  $brand = array_map(function($item) {return $item['item_type'];}, $product_shuffle);
+  $unique = array_unique($brand);
+  sort($unique);
+  shuffle($product_shuffle);
+
+  // Request Method Post
+  if($_SERVER['REQUEST_METHOD'] == "POST") {
+    if(isset($_POST['special_price_submit'])) {
+      // If the above condition satisfied then we call the addToCart method.
+      $cart->addToCart($_POST['user_id'], $_POST['item_id']); // To get the post data $_POST is used.
+    }
+  }
+?>
+
 <section id="special-price">
       <div class="container">
         <h4>Category Products</h4>
         <div class="text-center">
           <div id="filters" class="button-group">
             <button class="btn is-checked" data-filter="*">All Brand</button>
-            <button class="btn" data-filter=".Shoe">Shoes</button>
-            <button class="btn" data-filter=".Camera">Camera</button>
-            <button class="btn" data-filter=".Watch">Watch</button>
-            <button class="btn" data-filter=".Glasses">Glasses</button>
-            <button class="btn" data-filter=".Headphones">Headphones</button>
-            <button class="btn" data-filter=".Potted">Potted Plants</button>
+            <?php 
+              array_map(function($item) {
+                printf('<button class="btn" data-filter=".%s">%s</button>',$item, $item);
+              }, $unique);
+            ?>
           </div>
         </div>
 
         <div class="grid">
-          <div class="grid-item Shoe border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/Shoe/shoe.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">Nike Shoes</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
+          <?php array_map(function($item) { ?>
+              <div class="grid-item border pb-3 <?php echo $item['item_type'] ?? 'Type'; ?>">
+              <div class="item" style="width: 250px;">
+                <div class="product">
+                  <a href="#"><img src="<?php echo $item['item_image'] ?? './Images/products/Shoe/shoe.jpg'; ?>" alt="Product image" class="img-fluid"></a>
+                  <div class="text-center">
+                    <h6 class="h6"><?php echo $item['item_name'] ?? 'Unknown'; ?></h6>
+                    <div class="rating text-warning">
+                      <span><i class="fas fa-star"></i></span>
+                      <span><i class="fas fa-star"></i></span>
+                      <span><i class="fas fa-star"></i></span>
+                      <span><i class="fas fa-star"></i></span>
+                      <span><i class="far fa-star"></i></span>
+                    </div>
+                    <div class="price py-2">
+                      $ <?php echo $item['item_price'] ?? '0'; ?>
+                    </div>
+                    <form method="post">
+                      <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1';?>">
+                      <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                      <button type="submit" class="btn btn-warning" name="special_price_submit">Add to cart</button>
+                    </form>
                   </div>
-                  <div class="price py-2">
-                    $250
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid-item Camera border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/camera/camera.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">Camera</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
-                  </div>
-                  <div class="price py-2">
-                    $2000
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Watch border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/Watch/watch.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">Watch</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
-                  </div>
-                  <div class="price py-2">
-                    $175
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Glasses border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/Glasses/glasses.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">Sunglasses</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
-                  </div>
-                  <div class="price py-2">
-                    $30
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Headphones border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/headphones/headphone.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">JBL Headphones</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
-                  </div>
-                  <div class="price py-2">
-                    $80
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid-item Potted border pb-3">
-            <div class="item" style="width: 250px;">
-              <div class="product">
-                <a href="#"><img src="./Images/products/Potted Plant/pottedPlant.jpg" alt="Product image" class="img-fluid"></a>
-                <div class="text-center">
-                  <h6 class="h6">Potted Plant</h6>
-                  <div class="rating text-warning">
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="fas fa-star"></i></span>
-                    <span><i class="far fa-star"></i></span>
-                  </div>
-                  <div class="price py-2">
-                    $80
-                  </div>
-                  <button type="submit" class="btn btn-warning">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php },$product_shuffle); ?>
       </div>
     </section>

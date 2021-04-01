@@ -1,9 +1,14 @@
   <!-- Product Section -->
+  <?php 
+    $item_id = $_GET['item_id'] ?? 1;
+    foreach($product->getData() as $item) : 
+      if($item['item_id'] == $item_id) : 
+  ?>
   <section id="product" class="py-3">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-            <img src="./Images/products/Shoe/shoe.jpg" alt="Product Image" class="img-fluid">
+            <img src="<?php echo $item['item_image'] ?? './Images/products/Shoe/shoe.jpg'; ?>" alt="Product Image" class="img-fluid">
             <div class="row pt-4">
               <div class="col">
                 <button class="btn btn-danger form-control">Proceed to Buy</button>
@@ -14,8 +19,8 @@
             </div>
             </div>
             <div class="col-sm-6">
-              <h5 class="m-0">Nike Revolution 5 Running Shoes For Men (Red)</h5>
-              <p class="text-black-50 m-0">by NIKE</p>
+              <h5 class="m-0"><?php echo $item['item_name'] ?? 'Unknown'; ?></h5>
+              <p class="text-black-50 m-0">by <?php echo $item['item_brand'] ?? 'Brand'?></p>
               <div class="d-flex">
                 <div class="rating text-warning">
                   <span><i class="fas fa-star"></i></span>
@@ -30,15 +35,15 @@
               <table class="my-3">
                 <tr>
                   <td style="padding: 0 10px 0 0;">M.R.P : </td>
-                  <td><strike>$300.00</strike></td>
+                  <td><strike>$<span><?php echo $item['item_price'] ?? '0'; ?></span></strike></td>
                 </tr>
                 <tr>
                   <td style="padding: 0 10px 0 0;">Discount Price : </td>
-                  <td class="text-danger" style="font-size: 20px;">$<span>250.00</span><small style="font-size: 14px;" class="text-dark">&nbsp;&nbsp;inclusive of all taxes</small></td>
+                  <td class="text-danger" style="font-size: 20px;">$<?php $update = $item['item_price'] - $item['item_price']/10; $update = $update.'.00'; echo $update; ?><small style="font-size: 14px;" class="text-dark">&nbsp;&nbsp;inclusive of all taxes</small></td>
                 </tr>
                 <tr>
                   <td>You save : </td>
-                  <td class="text-danger" style="font-size: 16px;">$<span>50.00</span></td>
+                  <td class="text-danger" style="font-size: 16px;"><span>$ <?php $save = $item['item_price']/10; $save = $save . '.00'; echo $save; ?></span></td>
                 </tr>
               </table>
 
@@ -124,3 +129,7 @@
           </div>
         </div>
     </section>
+    <?php 
+      endif;
+    endforeach;
+    ?>
